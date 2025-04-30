@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>      
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>inicio</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>  
+<h1>Formulario</h1>
+    <center><hr><br>
+        <form>
+            <fieldset>
+                <h2>Datos Personales:</h2><br><br>
+                Nombre:<input type="text" name="nom" required><br><br>
+                Apellido:<input type="text" name="ap" required><br><br>
+                <h2>Tipo de Documento:</h2> <br>
+                Tarjeta de Identidad   <input type="radio" name="td" value="ti" required><br><br>
+                Cedula de Ciudadania   <input type="radio" name="td" value="cc" required><br><br>
+                Cedula Extranjera   <input type="radio" name="td" value="ce" required><br><br><br>
+                No. Documento: <input type="number" min="1000000" max="9999999999" required><br>
+                Fecha de Nacimiento:<input type="date" required><br>
+                <label>Registre su correo electrónico:</label><input type="email" required><br>
+                No. Celular: <input type="number" min="1000000000" max="9999999999" required>
+            </fieldset>
+            <fieldset>
+                <input type="submit" value="Enviar"><br><br>
+                <input type="reset" value="Borrar"><br>
+            </fieldset>
+        </form>
+    </center>
+</body>
+</html>
