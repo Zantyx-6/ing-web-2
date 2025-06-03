@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Segunda Pagina</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore dolor ipsa neque. Officiis dolore fugiat, earum eius quos qui ut sunt magnam et minus porro laborum harum repudiandae, quaerat incidunt.</p>
+    </div>
+    <style>
+        div{
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            text-align: center;
+            margin: 50px;
+        }
+        h1{
+            font-size: 50px;
+            font-weight: 900;
+        }
+        p{
+            font-size: 20px;
+        }
+        button{
+            padding: 10px 30px;
+            border: none;
+            background-color: #222;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 10px;
+            &:hover{
+                box-shadow: 0px 0px 20px 5px #05e067;
+                transform: scale(1.03);
+            }
+        }
+    </style>
+    <script>
+        // Mostrar alerta de bienvenida que se cierra después de 3 segundos
+        alert(setTimeout(() => {  window.alert("¡Hola, bienvenido!");
+        }, 3000));
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    console.log("Ubicación obtenida:");
+                    console.log("Latitud:", position.coords.latitude);
+                    console.log("Longitud:", position.coords.longitude);
+                }
+            );
+        }else {
+            console.error("Geolocalización no soportada por este navegador");
+        }
+        
+        
+        //boton para retroceder a la siguiente pagina
+        document.write('<br><br><button onclick = "history.back()">Retroceder</button>')
+    </script>
+</body>
+</html>

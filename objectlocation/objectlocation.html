@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Location</title>
+</head>
+<body>
+    <h1>Ejemplo del Object Location</h1>
+    <p>Observa la consola y espera para ser redirigido </p>
+
+    <script>
+        //En la consola
+        //URL actual 
+        console.log(`URL actual: ${location.href}`)
+
+        //Mostrar el nombre del dominio
+        console.log(`Dominio actual: ${location.hostname}`)
+
+        //Redirigir a GOOGLE Chrome
+        //setTimeout(()=> location.assign("https://www.google.com"),5000);
+        //Boton retroceder
+        document.write('<button onclick = "window.location.href=\'http://127.0.0.1:5500/objectlocation/ejemplo2.html\'">Avanzar</button>')
+
+    </script>
+</body>
+</html>

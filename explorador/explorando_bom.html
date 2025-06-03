@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo1.html</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f5f5f5;">
+    <h2>Resultado de codigo de JavaScript</h2>
+    <p>El resultado de los scripts es:</p>
+    <ul style="color: #26ad2d; padding-left: 20px; list-style-type: none;">
+        <li><strong>Ancho de la ventana del navegador:</strong> <span id="ancho"></span></li>
+        <li><strong>Alto de la ventana del navegador:</strong> <span id="alto"></span></li>
+        <li><strong>URL actual:</strong> <span id="url"></span></li>
+        <li><strong>Hostname:</strong> <span id="host"></span></li>
+    </ul>
+    <style>
+        *{
+            padding: 0;
+        }
+        body{
+            margin: 50px;
+            box-shadow: 0px 0px 30px 10px #26ad2d;
+        }
+        button{
+            padding:5px 15px;
+            border: none;
+            background-color: #222;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 10px;
+            &:hover{
+                box-shadow: 0px 0px 20px 5px #05e067;
+                transform: scale(1.03);
+            }
+        }
+        img{
+            width: 45px;
+            align-items: center;
+            margin-top: 5px;
+        }
+    </style>
+    <script>
+        // Obtener el elemento donde se van a mostrar los resultados
+        const resultado = document.getElementById("resultado");
+
+        //window
+        // Mostrar el ancho de la ventana
+        document.getElementById("ancho").textContent = window.innerWidth;
+        // Mostrar el alto de la ventana
+        document.getElementById("alto").textContent = window.innerHeight;
+        //  Window.alert
+        
+
+
+        //location
+        // Mostrar URL actual
+        document.getElementById("url").textContent = location.href;
+        // Hostname
+        document.getElementById("host").textContent = location.hostname;
+
+        //Navigator
+        //Navigator lenguaje
+        console.log(`Lenguaje: ${navigator.language}`)
+        //Navigator sistema operativo
+        console.log(`Sistema Operativo: ${navigator.platform}`)
+        //Navigator si esta online
+        console.log(`Esta Online: ${navigator.onLine}`)
+
+ 
+        //boton google
+        document.write('<button onclick = "window.location.href=\'https://www.google.com/?hl=es\'"><img src= "\google_logo.jpg"></button>')
+
+        //boton para avanzar a la siguiente pagina
+        document.write('<br><br><button onclick = "location.href=\'http://127.0.0.1:5500/explorador/explorando_bom2.html\'">Avanzar</button>')
+
+        // Mostrar cuántas entradas hay en el historial 
+        console.log(`Entradas en historial: ${history.length}`); 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Interactividad con Eventos</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="cabeza">
+        <h1 id="titulo">Bienvenido a mi página</h1>
+        <p id="parrafo">Este es un párrafo que cambiará de color.</p>
+      </div>
+
+      <button id="botonCambiar">Cambiar fondo y mostrar mensaje</button>
+
+      <input type="text" id="campoTexto" placeholder="Escribe algo aquí..." />
+      <p id="mensajesInput" class="parrafos" ></p>
+  
+      <p id="mensajeOculto" class="parrafos" style="display: none">
+        ¡Hola! Este mensaje apareció después de 3 segundos.
+      </p>
+      <div id="contenedor-reloj">
+        <p id="reloj"class="parrafos" >Hora: --:--:--</p>
+      </div>
+  
+      <button id="botonMensaje">Haz clic para mensaje personalizado</button>
+      <p id="mensajePersonalizado"class="parrafos" ></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

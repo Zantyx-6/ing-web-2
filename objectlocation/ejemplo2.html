@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2</title>
+</head>
+<body>
+    <h1>Ejemplo de numero de entradas</h1>
+    <p>Observa     </p>
+
+    <script>
+        //mostrar entradas a la pagina desde la consola
+        console.log(`Entradas a la página: ${history.length}`)
+
+        //Boton retroceder
+        document.write('<button onclick = "window.location.href=\'http://127.0.0.1:5500/objectlocation/objectlocation.html\'">Retroceder</button>')
+
+        //Navigator sistema operativo y navegador
+        console.log(`Navegador: ${navigator.userAgent}`)
+
+        //Navigator lenguaje
+        console.log(`Lenguaje: ${navigator.language}`)
+
+        //Navigator sistema operativo
+        console.log(`Sistema Operativo: ${navigator.platform}`)
+
+        //Navigator si esta online
+        console.log(`Esta Online: ${navigator.onLine}`)
+
+        //Navigator
+        //console.log(`Location: ${navigator.geolocation}`)
+        if(navigator.geolocation){
+            navigator.geolocation.geolocation
+
+        }
+    </script>
+
+
+</body>
+</html>

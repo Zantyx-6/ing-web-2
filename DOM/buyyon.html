@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Agregar Parrafo</button>
+    <div id="contenedor"></div>
+    <script>
+        document.getElementById("btn").addEventListener("click",()=> {
+            const parrafo = document.createElement("p");
+            parrafo.textContent = "Nuevo párrafo :)";
+        document.getElementById("contenedor").appendChild(parrafo);
+        });
+        
+    </script>
+</body>
+</html>

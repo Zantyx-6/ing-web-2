@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doom</title>
+</head>
+<body>
+    <h1>Frutas</h1>
+    <ul id="mi clase" class="lista-frutas">
+        <li class="fruta">Manzana</li>
+        <li class="fruta">Pera</li>
+        <li class="fruta">Naranja</li>
+    </ul>
+    <script>
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.textContent = "Mango";
+        const lista = document.querySelector("ul");
+        lista.appendChild(nuevoElemento);
+        lista.style.backgroundColor = "green";
+    </script>
+
+</body>
+</html>

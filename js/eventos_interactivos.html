@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactividad con Eventos</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #mensajePersonalizado{
+            margin-top: 20px;
+            color: rgb(0, 100, 139)
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Bienvenidos a mi pagina queridos Willy Wonkitas</h1>
+    <p id="parrafo">Este parrafo va a cambiar de color</p>
+    <button id="boton cambiar">Cambia el fondo y muestra un mensaje</button>
+    <br><br>
+    <input type="text" id="campoTexto" placeholder="Mi querido Willy Wonka escribe algo aqui...">
+
+    <p id="mensajeInput"></p>
+    <p id="mensajeOculto" style="display:none;">Hola Willy Wonkitas este mensaje aparecio despues de 5 segundos></p>
+
+    <p id="reloj">Hora: --:--:--</p>
+    <button id="botonMensaje">Haz clic para mensaje personalizado</button>
+    <p id="mensajePersonalizado"></p>
+    <script> src ="script.js"</script>
+    
+</body>
+</html>

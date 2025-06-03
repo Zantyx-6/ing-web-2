@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo1.html</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f5f5f5;">
+    <h2>Resultado de codigo de JavaScript</h2>
+    <p>El resultado de los scripts es:</p>
+    <ul style="color: #26ad2d; padding-left: 20px; list-style-type: none;">
+        <li><strong>Ancho de la ventana del navegador:</strong> <span id="ancho"></span></li>
+        <li><strong>Alto de la ventana del navegador:</strong> <span id="alto"></span></li>
+        <li><strong>Ancho de la ventana (incl. barras):</strong> <span id="anchoc"></span></li>
+        <li><strong>Alto de la ventana (incl. barras):</strong> <span id="altoc"></span></li>
+        <li><strong>URL actual:</strong> <span id="url"></span></li>
+        <li><strong>Información del navegador:</strong> <span id="info"></span></li>
+        <li><strong>Posición de la pantalla horizontal:</strong> <span id="posicionHorizontal"></span></li>
+        <li><strong>Posición de la pantalla vertical:</strong> <span id="posicionVertical"></span></li>
+    </ul>
+
+    <script>
+        // Obtener el elemento donde se van a mostrar los resultados
+        const resultado = document.getElementById("resultado");
+
+        // Mostrar el ancho de la ventana
+        document.getElementById("ancho").textContent = window.innerWidth;
+
+        // Mostrar el alto de la ventana
+        document.getElementById("alto").textContent = window.innerHeight;
+
+        // Mostrar el ancho de la ventana incluyendo barra de herramientas
+        document.getElementById("anchoc").textContent = outerWidth;
+
+        // Mostrar el alto de la ventana incluyendo barra de herramientas
+        document.getElementById("altoc").textContent = outerHeight;
+
+        // Mostrar URL actual
+        document.getElementById("url").textContent = location.href;
+
+        // Mostrar la información del navegador
+        document.getElementById("info").textContent = navigator.userAgent;
+
+        // Posición de la pantalla del navegador
+        document.getElementById("posicionHorizontal").textContent = screenX;
+
+        // Posición de la pantalla del navegador
+        document.getElementById("posicionVertical").textContent = screenY;
+    </script>
+</body>
+</html>
