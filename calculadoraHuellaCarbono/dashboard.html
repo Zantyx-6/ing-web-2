@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Ambiental</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header class="env-header">
+    <div class="env-header-container">
+      <div class="env-nav-wrapper">
+        <nav class="env-nav">
+          <a href="dashboard.html" class="env-link">🏠 Inicio</a>
+          <a href="huellaCarbono1.html" class="env-link">🌿 Calculadora Huella de Carbono</a>
+          <a href="/ONU.html" class="env-link">📌 17 ODS de la ONU</a>
+          <a href="/resinter.html" class="env-link">🌐 Restricciones de Internet</a>
+          <a href="huellaONU.html" class="env-link">📊 Indicadores ONU</a>
+        </nav>
+      </div>
+      <div class="env-logout-wrapper">
+        <button class="env-logout-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="intro">
+      <h1>Bienvenido/a <span id="username-placeholder">Usuario</span></h1>
+      <p>Este panel está diseñado para ayudarte a comprender mejor tu impacto ambiental y cómo contribuir a un planeta más sostenible.</p>
+    </section>
+
+    <section class="dashboard-cards">
+      <div class="parent">
+        <div class="div1">
+          <a href="https://fsembrandoesperanza.org/sostenibilidad-futuro-planeta/">
+          <img src="https://blog.oxfamintermon.org/wp-content/uploads/2015/08/iStock_000024262498_Small.jpg" alt="Sostenibilidad" id="img-sos">
+          <h2>Sostenibilidad</h2>
+          <p>La sostenibilidad es clave para el futuro del planeta. Aprende cómo reducir tu impacto diario.</p>
+        </a>
+        </div>
+        <div class="div2">
+          <img src="https://cevad.net/wp-content/uploads/2021/02/Desarrollo_sostenible.jpg" alt="Cambio climático">
+          <h2>Desarrollo Sostenible</h2>
+          <p>El desarrollo sostenible se refiere a un modelo de progreso que satisface las necesidades del presente sin comprometer la capacidad de las futuras generaciones para satisfacer las suyas.</p>
+        </div>
+        <div class="div3">
+          <img src="https://international-partnerships.ec.europa.eu/sites/default/files/styles/oe_theme_medium_no_crop/public/2022-05/sdg-wheel-landscape-white-bg_en.png?itok=XaUGogrB" alt="ODS ONU">
+          <h2>Objetivos ONU</h2>
+          <p>Descubre los 17 Objetivos de Desarrollo Sostenible y cómo puedes contribuir.</p>
+        </div>
+        <div class="div4">
+          <img src="https://itene.com/wp-content/uploads/2022/03/Huella-de-carbono-.jpg" alt="Censura en internet">
+          <h2>Huella de Carbono</h2>
+          <p>La huella de carbono es una medida de la cantidad total de gases de efecto invernadero (GEI) emitidos por una actividad, persona, organización o producto, generalmente expresada en unidades de dióxido de carbono equivalente (CO2e).</p>
+        </div>
+        <div class="div5">
+          <img src="https://revistaconsultoria.com.mx/wp-content/uploads/2022/09/logo-iso-normas-iso-mas-conocidas-y-aplicadas.png" alt="Sostenibilidad" width="348" height="145">
+          <h2>Normas ISO</h2>
+          <p>Las normas ISO son estándares internacionales creados por la Organización Internacional de Normalización (ISO) para asegurar la calidad, seguridad y eficiencia de productos, servicios y sistemas.</p>
+        </div>
+        <div class="div6">
+          <img src="https://www.enter.co/wp-content/uploads/2015/02/censura_1024.jpg " alt="Sostenibilidad">
+          <h2>Censura en Internet</h2>
+          <p>La censura digital limita el acceso a la información, impide la libertad de expresión y restringe la educación ambiental en algunos países.</p>
+        </div>
+        <div class="div7">
+          <img src="https://www.shutterstock.com/image-photo/global-warming-climate-change-concept-600nw-2601274575.jpg " alt="Sostenibilidad">
+          <h2>Cambio Climático</h2>
+          <p>Infórmate sobre las causas y consecuencias del cambio climático y cómo combatirlo.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="env-footer">
+    <p>Síguenos en:</p>
+    <div id="footer">
+      <div class="social">
+        <ul>
+          <li>N° de Contacto: +57 3214728895</li>
+          <li>Copyright 2025 ©</li>
+          <li>Desarrolladores</li>
+          <li>Omar Cortes Parra</li>
+          <li>Juan Sebastian Melo</li>
+          <li>Ambiente y Desarrollo Sostenible</li>
+        </ul>
+      </div>
+      <div class="env-social-icons">
+        <a href="#" class="env-social">🌐 Web</a>
+        <a href="#" class="env-social">📘 Facebook</a>
+        <a href="#" class="env-social">📸 Instagram</a>
+        <a href="#" class="env-social">🐦 Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("username-placeholder").textContent =
+      localStorage.getItem("carbonUsername") || "Usuario";
+
+    function cerrarSesion() {
+      localStorage.removeItem("carbonUsername");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

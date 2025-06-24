@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora ONU - Huella de Carbono</title>
+  <link rel="stylesheet" href="huellaONU.css">
+</head>
+<body>
+  <header class="env-header">
+    <div class="env-header-container">
+      <div class="env-nav-wrapper">
+        <nav class="env-nav">
+          <a href="dashboard.html" class="env-link">🏠 Inicio</a>
+          <a href="huellaCarbono1.html" class="env-link">🌿 Calculadora Huella de Carbono</a>
+          <a href="/ONU.html" class="env-link">📌 17 ODS de la ONU</a>
+          <a href="/resinter.html" class="env-link">🌐 Restricciones de Internet</a>
+          <a href="huellaONU.html" class="env-link">📊 Indicadores ONU</a>
+        </nav>
+      </div>
+      <div class="env-logout-wrapper">
+        <button class="env-logout-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="intro">
+      <h1>Calculadora ONU de Huella de Carbono</h1>
+      <p>Responde estas preguntas para calcular tu huella de carbono según estándares de la ONU.</p>
+      <p>La meta recomendada es no superar las <strong>2 toneladas de CO₂ por año</strong>.</p>
+    </section>
+
+    <section class="container">
+
+      <!-- HOGAR -->
+      <h2>🏠 Hogar</h2>
+      <div class="form-group">
+        <label>¿Qué tipo de vivienda habitas?</label><br>
+        <input type="radio" name="vivienda" value="casa" checked> Casa individual<br>
+        <input type="radio" name="vivienda" value="departamento"> Departamento<br>
+        <input type="radio" name="vivienda" value="compartida"> Vivienda compartida
+      </div>
+
+      <div class="form-group">
+        <label>¿Cuál es tu consumo de electricidad mensual?</label>
+        <input type="range" id="kwh" min="0" max="1000" value="300" step="50">
+        <div class="slider-container">
+          <span>0 kWh</span>
+          <span id="kwh-value" class="slider-value">300 kWh</span>
+          <span>1000 kWh</span>
+        </div>
+      </div>
+
+      <!-- TRANSPORTE -->
+      <h2>🚗 Transporte</h2>
+      <div class="form-group">
+        <label>¿Qué medios de transporte usas frecuentemente?</label><br>
+        <input type="checkbox" value="auto"> Auto<br>
+        <input type="checkbox" value="moto"> Moto<br>
+        <input type="checkbox" value="bus"> Bus<br>
+        <input type="checkbox" value="metro"> Metro<br>
+        <input type="checkbox" value="bici"> Bicicleta<br>
+        <input type="checkbox" value="aPie"> A pie
+      </div>
+
+      <div class="form-group">
+        <label>¿Cuántas horas por semana usas transporte motorizado?</label>
+        <input type="range" id="horasTransporte" min="0" max="30" value="10" step="1">
+        <div class="slider-container">
+          <span>0 h</span>
+          <span id="horasTransporte-value" class="slider-value">10 h</span>
+          <span>30 h</span>
+        </div>
+      </div>
+
+      <!-- ESTILO DE VIDA -->
+      <h2>🌱 Estilo de vida</h2>
+      <div class="form-group">
+        <label>¿Con qué frecuencia consumes carne?</label><br>
+        <input type="radio" name="carne" value="alta" checked> Todos los días<br>
+        <input type="radio" name="carne" value="media"> 2-3 veces por semana<br>
+        <input type="radio" name="carne" value="baja"> 1 vez por semana o menos<br>
+        <input type="radio" name="carne" value="ninguna"> No como carne<br>
+      </div>
+
+      <div class="form-group">
+        <label>¿Reciclas regularmente?</label><br>
+        <input type="radio" name="reciclaje" value="si" checked> Sí<br>
+        <input type="radio" name="reciclaje" value="no"> No
+      </div>
+
+      <div class="form-group">
+        <label>¿Cada cuánto compras ropa nueva?</label><br>
+        <input type="radio" name="ropa" value="frecuente" checked> Cada mes<br>
+        <input type="radio" name="ropa" value="ocasional"> Cada 3-6 meses<br>
+        <input type="radio" name="ropa" value="rara"> 1 vez al año o menos
+      </div>
+
+      <!-- BOTÓN -->
+      <button onclick="calcularHuellaONU()">Calcular mi huella</button>
+
+      <!-- RESULTADO -->
+      <div class="result" id="resultado" style="display:none; margin-top: 20px;"></div>
+    </section>
+  </main>
+
+  <footer class="env-footer">
+    <p>Síguenos en:</p>
+    <div id="footer">
+      <div class="social">
+        <ul>
+          <li>N° de Contacto: +57 3214728895</li>
+          <li>Copyright 2025 ©</li>
+          <li>Desarrolladores</li>
+          <li>Omar Cortes Parra</li>
+          <li>Juan Sebastian Melo</li>
+          <li>Ambiente y Desarrollo Sostenible</li>
+        </ul>
+      </div>
+      <div class="env-social-icons">
+        <a href="#" class="env-social">🌐 Web</a>
+        <a href="#" class="env-social">📘 Facebook</a>
+        <a href="#" class="env-social">📸 Instagram</a>
+        <a href="#" class="env-social">🐦 Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="huellaONU.js"></script>
+</body>
+</html>

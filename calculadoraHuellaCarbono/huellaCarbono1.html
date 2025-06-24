@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Huella de Carbono</title>
+  <link rel="stylesheet" href="huellaCarbono1.css" />
+</head>
+<body>
+
+  <header class="env-header">
+    <div class="env-header-container">
+      <div class="env-nav-wrapper">
+        <nav class="env-nav">
+          <a href="dashboard.html" class="env-link">🏠 Inicio</a>
+          <a href="huellaCarbono1.html" class="env-link">🌿 Calculadora Huella de Carbono</a>
+          <a href="/ONU.html" class="env-link">📌 17 ODS de la ONU</a>
+          <a href="/resinter.html" class="env-link">🌐 Restricciones de Internet</a>
+          <a href="huellaONU.html" class="env-link">📊 Indicadores ONU</a>
+        </nav>
+      </div>
+      <div class="env-logout-wrapper">
+        <button class="env-logout-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="calculator-content">
+    <div class="intro">
+      <h1>Calculadora de Huella de Carbono</h1>
+      <p>
+        Bienvenido, <strong><span id="display-username"></span></strong>.
+        Esta herramienta te permite calcular tu huella de carbono personal basada en tus hábitos de transporte, consumo energético, alimentación y reciclaje.
+      </p>
+      <p>
+        Conocer tu impacto es el primer paso para actuar. Usa esta calculadora para reflexionar sobre tu estilo de vida y obtener consejos personalizados para reducir tu huella.
+      </p>
+    </div>
+
+    <div class="container">
+
+      <!-- Transporte -->
+      <div class="form-section">
+        <h2>Transporte</h2>
+
+        <div class="form-group">
+          <label for="car-usage">¿Cuántos kilómetros recorres en auto por semana?</label>
+          <input type="range" id="car-usage" min="0" max="1000" value="150" step="10"/>
+          <div class="slider-container">
+            <span>0 km</span>
+            <span class="slider-value" id="car-usage-value">150 km</span>
+            <span>1000 km</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="car-efficiency">Eficiencia del vehículo (litros cada 100 km):</label>
+          <input type="range" id="car-efficiency" min="3" max="20" value="8" step="0.5"/>
+          <div class="slider-container">
+            <span>3 L/100km</span>
+            <span class="slider-value" id="car-efficiency-value">8 L/100km</span>
+            <span>20 L/100km</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="public-transport">¿Cuántos kilómetros recorres en transporte público?</label>
+          <input type="range" id="public-transport" min="0" max="500" value="50" step="5"/>
+          <div class="slider-container">
+            <span>0 km</span>
+            <span class="slider-value" id="public-transport-value">50 km</span>
+            <span>500 km</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Energía -->
+      <div class="form-section">
+        <h2>Energía</h2>
+        <div class="form-group">
+          <label for="energy">Consumo de energía (kWh por mes):</label>
+          <input type="range" id="energy" min="0" max="1000" value="300" step="10"/>
+          <div class="slider-container">
+            <span>0 kWh</span>
+            <span class="slider-value" id="energy-value">300 kWh</span>
+            <span>1000 kWh</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alimentación -->
+      <div class="form-section">
+        <h2>Alimentación</h2>
+        <div class="form-group">
+          <label for="food">Consumo de carne (veces por semana):</label>
+          <input type="range" id="food" min="0" max="21" value="7" step="1"/>
+          <div class="slider-container">
+            <span>0 veces</span>
+            <span class="slider-value" id="food-value">7 veces</span>
+            <span>21 veces</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consumo -->
+      <div class="form-section">
+        <h2>Consumo y Reciclaje</h2>
+        <div class="form-group">
+          <label for="phone-change">¿Con qué frecuencia cambias de teléfono móvil?</label>
+          <select id="phone-change">
+            <option value="4">Más de 3 años</option>
+            <option value="3" selected>2-3 años</option>
+            <option value="2">1-2 años</option>
+            <option value="1">Cada año</option>
+            <option value="0.5">Más de una vez al año</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="recycling">¿Qué porcentaje de residuos reciclas?</label>
+          <input type="range" id="recycling" min="0" max="100" value="50" step="5"/>
+          <div class="slider-container">
+            <span>0%</span>
+            <span class="slider-value" id="recycling-value">50%</span>
+            <span>100%</span>
+          </div>
+        </div>
+      </div>
+
+      <button id="calculate-btn">Calcular Huella de Carbono</button>
+
+      <div id="result-container" class="result hidden">
+        <h2>Resultado</h2>
+        <p>Tu huella de carbono anual estimada es: <span id="carbon-footprint"></span> kg CO₂</p>
+        <div id="rating"></div>
+        <h3>Consejos para reducir tu huella:</h3>
+        <ul id="tips"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="env-footer">
+    <p>Síguenos en:</p>
+    <div id="footer">
+      <div class="social">
+        <ul>
+          <li>N° de Contacto: +57 3214728895</li>
+          <li>Copyright 2025 ©</li>
+          <li>Desarrolladores</li>
+          <li>Omar Cortes Parra</li>
+          <li>Juan Sebastian Melo</li>
+          <li>Ambiente y Desarrollo Sostenible</li>
+        </ul>
+      </div>
+      <div class="env-social-icons">
+        <a href="#" class="env-social">🌐 Web</a>
+        <a href="#" class="env-social">📘 Facebook</a>
+        <a href="#" class="env-social">📸 Instagram</a>
+        <a href="#" class="env-social">🐦 Twitter</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="huellaCarbono1.js"></script>
+  <script>
+    function cerrarSesion() {
+      localStorage.removeItem("carbonUsername");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

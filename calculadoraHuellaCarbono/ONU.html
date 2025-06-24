@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ONU.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="env-header">
+        <div class="env-header-container">
+            <div class="env-nav-wrapper">
+                <nav class="env-nav">
+                    <a href="dashboard.html" class="env-link">🏠 Inicio</a>
+                    <a href="huellaCarbono1.html" class="env-link">🌿 Calculadora Huella de Carbono</a>
+                    <a href="/ONU.html" class="env-link">📌 17 ODS de la ONU</a>
+                    <a href="/resinter.html" class="env-link">🌐 Restricciones de Internet</a>
+                    <a href="huellaONU.html" class="env-link">📊 Indicadores ONU</a>
+                </nav>
+            </div>
+        <div class="env-logout-wrapper">
+        <button class="env-logout-btn" onclick="cerrarSesion()">Cerrar sesión</button>
+    </header>
+
+    <div>
+        <img src="/titulo-removebg-preview.png" id="titulo">
+    </div>
+  
+    <div class="parent">
+        <div class="div11">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/7e/Obj-ODS-01-7e3b5a91.png">
+            <div class="info-hover-1">
+                <img src="https://sdgs.un.org/sites/default/files/2020-10/Screenshot%202020-10-08%20130739.png">
+                <h2><strong>Poner fin a la pobreza en todas sus formas en todo el mundo</strong></h2>
+            </div>
+         </div>
+        <div class="div28">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/bd/Obj-ODS-02-bde44f2c.png">
+            <div class="info-hover-2">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%202%20-%20sp.png">
+                <h2><strong>Poner fin al hambre, lograr la seguridad alimentaria y la mejora de la nutrición y promover la agricultura sostenible</strong></h2>
+            </div>
+        </div>
+        <div class="div12">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/9b/Obj-ODS-03-9b04f1bb.png">
+            <div class="info-hover-3">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%203%20-%20sp_1.png">
+                <h2><strong>Garantizar una vida sana y promover el bienestar de todos a todas las edades</strong></h2>
+            </div>
+        </div>
+        <div class="div14">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/fb/Obj-ODS-04-fbf6dbae.png">
+            <div class="info-hover-4">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%204%20-%20sp.png">
+                <h2><strong>Garantizar una educación inclusiva y equitativa de calidad y promover oportunidades de aprendizaje permanente para todos</strong></h2>
+            </div>
+        </div>
+        <div class="div15">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/a3/Obj-ODS-05-a3a71984.png">
+            <div class="info-hover-5">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%205%20-%20sp.png">
+                <h2><strong>Lograr la igualdad de género y empoderar a todas las mujeres y las niñas</strong></h2>
+            </div>
+        </div>
+        <div class="div16">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/10/Obj-ODS-06-1012f8b6.png">
+            <div class="info-hover-6">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%206%20-%20sp.png">
+                <h2><strong>Garantizar la disponibilidad y la gestión sostenible del agua y el saneamiento para todos</strong></h2>
+            </div>
+        </div>
+        <div class="div17">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/a6/Obj-ODS-07-a6aae39d.png">
+            <div class="info-hover-7">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%207%20-%20sp.png">
+                <h2><strong>Garantizar el acceso a una energía asequible, fiable, sostenible y moderna para todos</strong></h2>
+            </div>
+        </div>
+        <div class="div18">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/bf/Obj-ODS-08-bfedc08f.png">
+            <div class="info-hover-8">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%208%20-%20sp.png">
+                <h2><strong>Promover el crecimiento económico sostenido, inclusivo y sostenible, el empleo pleno y productivo y el trabajo decente para todos</strong></h2>
+            </div>
+        </div>
+        <div class="div19">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/60/Obj-ODS-09-60c3a647.png">
+            <div class="info-hover-9">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%209%20-%20sp_0.png">
+                <h2><strong>Construir infraestructuras resilientes, promover la industrialización inclusiva y sostenible y fomentar la innovación</strong></h2>
+            </div>
+        </div>
+        <div class="div20">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/cd/Obj-ODS-10-cd5c38cf.png">
+            <div class="info-hover-10">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%2010%20-%20sp.png">
+                <h2><strong>Reducir la desigualdad en los países y entre ellos</strong></h2>
+            </div>
+        </div>
+        <div class="div21">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/ec/Obj-ODS-11-ecd14241.png">
+            <div class="info-hover-11">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%2011%20-sp.png">
+                <h2><strong>lograr que las ciudades y los asentamientos humanos sean inclusivos, seguros, resilientes y sostenibles</strong></h2>
+            </div>
+        </div>
+        <div class="div22">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/58/Obj-ODS-12-5809676a.png">
+            <div class="info-hover-12">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%2012%20-%20sp.png">
+                <h2><strong>Garantizar modalidades de consumo y producción sostenibles</strong></h2>
+            </div>
+        </div>
+        <div class="div23">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/89/Obj-ODS-13-89fc8990.png">
+            <div class="info-hover-13">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%2013%20-%20sp.png">
+                <h2><strong>Adoptar medidas urgentes para combatir el cambio climático y sus efectos</strong></h2>
+            </div>
+        </div>
+        <div class="div24">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/a2/Obj-ODS-14-a203c18e.png">
+            <div class="info-hover-14">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%2014%20-%20sp.png">
+                <h2><strong>Conservar y utilizar sosteniblemente los océanos, los mares y los recursos marinos para el desarrollo sostenible</strong></h2>
+            </div>
+        </div>
+        <div class="div25">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/6d/Obj-ODS-15-6d80da2c.png">
+            <div class="info-hover-15">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%2015%20-%20sp.png">
+                <h2><strong>Proteger, restablecer y promover el uso sostenible de los ecosistemas terrestres, gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras y detener la pérdida de biodiversidad</strong></h2>
+            </div>
+        </div>
+        <div class="div26">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/37/Obj-ODS-16-37569e2b.png">
+            <div class="info-hover-16">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/S-WEB-Goal-16.png">
+                <h2><strong>Promover sociedades pacíficas e inclusivas para el desarrollo sostenible, facilitar el acceso a la justicia para todos y construir a todos los niveles instituciones eficaces e inclusivas que rindan cuentas</strong></h2>
+            </div>
+        </div>
+        <div class="div27">
+            <img src="https://datoscede.uniandes.edu.co/wp-content/themes/yootheme/cache/91/Obj-ODS-17-91a44047.png">
+            <div class="info-hover-17">
+                <img src="https://sdgs.un.org/sites/default/files/2020-11/Goal%2017%20-%20sp.png">
+                <h2><strong>Fortalecer los medios de implementación y revitalizar la Alianza Mundial para el Desarrollo Sostenible</strong></h2>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="env-footer">
+        <p>Síguenos en:</p>
+        <div id="footer">
+            <div class="social">
+                <ul>
+                    <li>N° de Contacto: +57 3214728895</li>
+                    <li>Copyright 2025 ©</li>
+                    <li>Desarrolladores</li>
+                    <li>Omar Cortes Parra</li>
+                    <li>Juan Sebastian Melo</li>
+                    <li>Ambiente y Desarrollo Sostenible</li>
+                </ul>
+            </div>
+            <div class="env-social-icons">
+                <a href="#" class="env-social">🌐 Web</a>
+                <a href="#" class="env-social">📘 Facebook</a>
+                <a href="#" class="env-social">📸 Instagram</a>
+                <a href="#" class="env-social">🐦 Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
