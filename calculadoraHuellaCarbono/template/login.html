@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" type="text/css" href="/login.css">
+</head>
+<body>
+    <form action="{{ url_for('login') }}" method="post">
+        <div class="container">
+            <h1>Iniciar Sesión</h1>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="Nombre de usuario:" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Contraseña " required minlength="8">
+                <div id="password-error" class="error hidden">La contraseña debe tener al menos 8 caracteres</div>
+            </div>
+            <button id="login-btn">Siguiente</button>
+            <a href="/template/registro.html">¿No tienes una cuenta? Registrate Aquí</a>
+        </div>
+    </form>
+</body>
+</html>

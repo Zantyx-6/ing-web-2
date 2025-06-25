@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 document.getElementById("login-btn").addEventListener("click", (e) => {
   e.preventDefault();
 

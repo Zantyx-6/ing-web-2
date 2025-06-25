@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" type="text/css" href="/registro.css">
+</head>
+<body>
+    <form action="/registro" method="post">
+        <div class="container">
+            <h1>Registrate</h1>
+            <div class="form-group">
+                <input type="text" id="usernameRegistro" placeholder="Nombre de usuario:" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="passwordRegistro" placeholder="Contraseña " required minlength="8"><br>
+                <div id="password-error" class="error hidden">La contraseña debe tener al menos 8 caracteres</div>
+            </div>
+            <button id="login-btn">Siguiente</button>
+            <a href="/template/login.html">¿Ya tienes una cuenta? Ingresa Aquí</a>
+        </div>
+    </form>
+</body>
+</html>

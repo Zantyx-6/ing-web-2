@@ -65,3 +65,12 @@ button:hover {
 .hidden {
   display: none;
 }
+
+a{
+  display: grid;
+  place-items: center;
+  margin: 15px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
